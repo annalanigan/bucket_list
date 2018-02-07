@@ -5,9 +5,9 @@ const CountryData = function(url){
   this.onLoad = null;
 }
 
-CountryData.prototype.getData = function () {
-  let countryRequest = new Request(this.data);
-  countryRequest.get(this.onLoad);
+CountryData.prototype.getData = function (callback) {
+  let countryRequest = new Request(this.url);
+  countryRequest.get(callback);
 };
 
 module.exports = CountryData;

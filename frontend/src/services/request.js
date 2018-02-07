@@ -3,6 +3,7 @@ const Request = function(url){
 }
 
 Request.prototype.get = function (callback) {
+  console.log("this.url", this.url)
   const getRequest = new XMLHttpRequest();
   getRequest.open('GET', this.url);
   getRequest.addEventListener('load', function() {
